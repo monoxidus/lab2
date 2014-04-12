@@ -1,0 +1,5 @@
+#! /bin/bash
+
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -fPIC -g -c index.c data.c
+gcc -shared -o list.so index.o data.o pair.o list.o
+gcc -shared -o dict.so index.o data.o pair.o list.o dict.o
